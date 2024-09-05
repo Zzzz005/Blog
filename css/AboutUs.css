@@ -1,0 +1,136 @@
+body{
+    margin: 0;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    margin: 0 20px;
+}
+
+.header{
+    background-size:auto;
+}
+.header-line{
+    padding-top: 50px;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+}
+
+.navigation-bar {
+    display: grid;
+    grid-template-columns: 2fr 3.5fr 1fr 5fr;
+    padding: 10px 20px;
+}
+
+.nav-item{
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 25px ;
+    transition: color 0.3s linear;
+    font-family: 'DM Serif Display', serif;
+}
+
+.nav-item:hover {
+    text-decoration: none;
+    text-shadow: 0 0 20px white; 
+}
+
+@media screen and (max-width: 767px) {
+    .navigation-bar {
+        grid-template-columns: 5fr; 
+    }
+}
+
+.header-title{
+    color: white;
+    font-family: 'Abril Fatface', serif;
+    font-family: 'DM Serif Display', serif;
+    font-size: 100px;
+    font-weight: 300;
+    text-align: left;
+    position: absolute;
+    left: 0;
+    margin-top: 150px;
+}
+
+.History{
+    padding: 10px 200px 0 100px;
+}
+
+.History-Title{
+    padding: 100px 0 20px 50px;
+}
+.History-Title-1{
+    color: #6F6250;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    text-align: left;
+    margin: 10px 100px 0 180px;
+    padding: 50px 0 0 50px;
+}
+.History-Title-2{
+    color: #6F6250;
+    font-family: 'Abril Fatface', serif;
+    font-family: 'DM Serif Display', serif;
+    font-size: 100px;
+    font-weight: 300;
+    text-align: left;
+    left: 0;
+    margin-top: -10px;
+}
+.History-Title, .History-Title-1, .History-Title-2 {
+    box-sizing: border-box;
+}
+
+.advantages-text-1{
+    color: #6F6250;
+    font-family: 'Abril Fatface', serif;
+    font-family: 'DM Serif Display', serif;
+    font-size: 50px;
+    font-weight: 300;
+    text-align: left;
+    left: 0;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.advantages-text-2{
+    color: #6F6250;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin-left: 20px;
+    margin-right: 50px;
+
+}
+
+
+
+@media screen and (max-width: 767px) {
+    .carousel-fade {
+        width: 100%; /* Растягиваем карусель на всю ширину экрана */
+    }
+
+    .advantages {
+        flex-direction: column; /* Меняем направление главного контейнера на вертикальное */
+    }
+
+    .advantages-text {
+        margin-top: 20px; /* Добавляем отступ сверху, чтобы текст не сливался с каруселью */
+    }
+}
+
+.animated-element {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s, transform 1s;
+  }
+  
+  .animated-element.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }

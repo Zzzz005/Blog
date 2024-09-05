@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+}
+
+.container {
+    margin: 0 20px;
+}
+
+.header {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+     position: relative;
+}
+
+.header-line {
+    padding-top: 50px;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+}
+
+.navigation-bar {
+    display: grid;
+    grid-template-columns: 2fr 3.5fr 1fr 5fr;
+    padding: 10px 20px;
+}
+
+.nav-item{
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 25px ;
+    transition: color 0.3s linear;
+    font-family: 'DM Serif Display', serif;
+}
+
+.nav-item:hover {
+    text-decoration: none;
+    text-shadow: 0 0 20px white; 
+}
+
+@media screen and (max-width: 767px) {
+    .navigation-bar {
+        grid-template-columns: 5fr;
+    }
+}
+
+
+.header-down {
+    position: relative;
+}
+
+.header-title {
+    color: white;
+    font-family: 'Abril Fatface', serif;
+    font-family: 'DM Serif Display', serif;
+    font-size: 100px;
+    font-weight: 300;
+    text-align: left;
+    position: absolute;
+    left: 0;
+    margin-top: 150px;
+}
+
+.card-title {
+    color:#3B1611;
+    font-family: 'Abril Fatface', serif;
+    font-family: 'DM Serif Display', serif;
+    font-size: 70px;
+    font-weight: 200;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.aboutUs {
+    background-color: #C88543;
+    display: flex;
+    padding-top: 80px;
+    padding-left: 80px;
+}
+
+.aboutUs-title {
+    color: #6F6250;
+    font-family: 'Abril Fatface', serif;
+    font-family: 'DM Serif Display', serif;
+    font-size: 130px;
+    font-weight: 200;
+    text-align: left;
+    margin: 10px 20px 0 20px; 
+}
+
+.aboutUs-minititle {
+    color: #6F6250;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    text-align: left;
+    padding-left: 100px;
+    margin: 10px 20px 0 20px; 
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        margin: 0 10px;
+    }
+
+    .header-title {
+        font-size: 60%;
+    }
+
+    .aboutUs-title,
+    .aboutUs-minititle {
+        margin: 10px 10px 0 10px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .aboutUs {
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+    }
+
+    .aboutUs-title {
+        margin: 10px 0; 
+    }
+
+    .aboutUs-minititle {
+        margin: 10px 0;
+    }
+}
+
+.animated-element {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s, transform 1s;
+  }
+  
+  .animated-element.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
+  .background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: floatBackground 100s infinite linear;
+    background: url(../image/WomanBook.jpg) repeat-y; 
+}
+
+@keyframes floatBackground {
+    0% {
+        background-position: 0 100%;
+    }
+    50% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 100%;
+    }
+}
